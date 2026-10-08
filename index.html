@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Proposta Comercial — Camila</title><meta content="Proposta comercial estratégica  para Camila." name="description"/><style>
+  :root{
+    --bg:#090a0d;
+    --bg-2:#0d0f14;
+    --surface:rgba(255,255,255,.035);
+    --surface-2:rgba(255,255,255,.055);
+    --line:rgba(255,255,255,.11);
+    --text:#f4f4ef;
+    --muted:#a4a7b0;
+    --accent:#6574ff;
+    --accent-2:#8a96ff;
+    --green:#b9f7cc;
+    --radius:30px;
+    --max:1180px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    color:var(--text);
+    background:
+      radial-gradient(900px 500px at 78% -10%, rgba(101,116,255,.16), transparent 60%),
+      radial-gradient(700px 520px at 10% 35%, rgba(101,116,255,.08), transparent 65%),
+      var(--bg);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height:1.45;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:.16em;font-size:.77rem;
+    font-weight:700;color:#8e92a0;margin-bottom:18px
+  }
+  h1,h2,h3,p{margin-top:0}
+  h1{
+    font-size:clamp(3.6rem,8vw,7.6rem);
+    line-height:.92;letter-spacing:-.06em;margin-bottom:26px
+  }
+  h2{
+    font-size:clamp(2.2rem,4.5vw,4.7rem);
+    line-height:.98;letter-spacing:-.045em;margin-bottom:24px
+  }
+  h3{font-size:1.1rem;letter-spacing:-.02em}
+  .lead{
+    font-size:clamp(1.08rem,2vw,1.5rem);
+    color:#b7bac3;max-width:760px
+  }
+  .muted{color:var(--muted)}
+  .accent{color:var(--accent-2)}
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(9,10,13,.72);backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.07)
+  }
+  .nav-inner{
+    height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px
+  }
+  .brand{font-weight:800;letter-spacing:-.03em}
+  .nav-meta{font-size:.86rem;color:#8f929b}
+  .pill{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:10px 15px;border:1px solid var(--line);border-radius:999px;
+    color:#d7d8dc;font-size:.82rem;background:rgba(255,255,255,.03)
+  }
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent)}
+  section{padding:120px 0}
+  .hero{
+    min-height:100vh;display:flex;align-items:flex-end;
+    padding-top:150px;padding-bottom:70px;position:relative
+  }
+  .hero::after{
+    content:"";position:absolute;right:-180px;bottom:50px;width:520px;height:520px;
+    border:1px solid rgba(255,255,255,.07);border-radius:50%;
+    box-shadow:0 0 0 80px rgba(255,255,255,.018),0 0 0 160px rgba(255,255,255,.012)
+  }
+  .hero-copy{position:relative;z-index:2;max-width:980px}
+  .hero-bottom{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    gap:28px;margin-top:70px;padding-top:24px;border-top:1px solid var(--line)
+  }
+  .hero-bottom .small{max-width:430px;color:#9da0aa;font-size:.94rem}
+  .arrow{font-size:1.6rem;color:#757b8a}
+  .split{
+    display:grid;grid-template-columns:1.08fr .92fr;gap:22px
+  }
+  .panel{
+    border:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.018));
+    border-radius:var(--radius);padding:46px;position:relative;overflow:hidden
+  }
+  .panel.glow::before{
+    content:"";position:absolute;width:260px;height:260px;border-radius:50%;
+    background:rgba(101,116,255,.18);filter:blur(55px);right:-90px;top:-100px
+  }
+  .statement{font-size:clamp(1.6rem,3vw,2.7rem);line-height:1.08;letter-spacing:-.035em}
+  .flow{
+    display:flex;flex-wrap:wrap;gap:10px;margin-top:36px
+  }
+  .flow span{
+    padding:11px 14px;border-radius:999px;background:rgba(101,116,255,.09);
+    border:1px solid rgba(101,116,255,.26);font-size:.9rem
+  }
+  .arrow-inline{opacity:.4;padding:11px 0}
+  .transition{
+    display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center
+  }
+  .state{
+    padding:38px;border-radius:26px;border:1px solid var(--line);background:rgba(255,255,255,.025)
+  }
+  .state h3{font-size:1.5rem;margin-bottom:16px}
+  .state ul{padding:0;margin:0;list-style:none;color:var(--muted)}
+  .state li{padding:7px 0}
+  .big-arrow{font-size:2rem;color:var(--accent-2)}
+  .cards-4,.cards-3{
+    display:grid;gap:18px;margin-top:42px
+  }
+  .cards-4{grid-template-columns:repeat(4,1fr)}
+  .cards-3{grid-template-columns:repeat(3,1fr)}
+  .card{
+    min-height:220px;border:1px solid var(--line);border-radius:26px;padding:30px;
+    background:rgba(255,255,255,.025);position:relative;overflow:hidden
+  }
+  .card .num{
+    font-size:.78rem;letter-spacing:.14em;color:#7f8490;margin-bottom:60px
+  }
+  .card h3{font-size:1.4rem;margin-bottom:14px}
+  .card p{color:var(--muted);margin-bottom:0}
+  .card.highlight{border-color:rgba(101,116,255,.55);background:linear-gradient(180deg,rgba(101,116,255,.10),rgba(255,255,255,.025))}
+  .orbit{
+    height:380px;display:grid;place-items:center;position:relative
+  }
+  .orbit-ring{
+    position:absolute;border:1px solid rgba(255,255,255,.12);border-radius:50%
+  }
+  .r1{width:130px;height:130px}.r2{width:240px;height:240px}.r3{width:350px;height:350px}
+  .core{
+    width:78px;height:78px;border-radius:50%;background:var(--accent);
+    box-shadow:0 0 60px rgba(101,116,255,.42)
+  }
+  .process{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    margin-top:44px;border:1px solid var(--line);border-radius:28px;overflow:hidden
+  }
+  .step{padding:34px;min-height:250px;border-right:1px solid var(--line);background:rgba(255,255,255,.02)}
+  .step:last-child{border-right:0}
+  .step .n{font-size:3rem;font-weight:800;letter-spacing:-.06em;color:#53596a;margin-bottom:50px}
+  .step h3{font-size:1.25rem}
+  .step p{color:var(--muted)}
+  .recording{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch
+  }
+  .recording .big{
+    font-size:clamp(3.2rem,7vw,6.2rem);letter-spacing:-.06em;line-height:.9;
+    margin:28px 0
+  }
+  .roles{
+    display:flex;gap:9px;flex-wrap:wrap;margin-top:26px
+  }
+  .roles span{padding:10px 14px;border:1px solid var(--line);border-radius:999px;color:#c7c9d0}
+  .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:42px}
+  .service{
+    padding:34px;border-radius:26px;border:1px solid var(--line);background:rgba(255,255,255,.022)
+  }
+  .service h3{display:flex;justify-content:space-between;gap:15px;font-size:1.2rem}
+  .service h3 span{color:#555b6b;font-weight:500}
+  .service p{color:var(--muted);margin-bottom:0}
+  .questions{
+    margin-top:38px;border-top:1px solid var(--line)
+  }
+  .q{
+    display:flex;justify-content:space-between;gap:30px;
+    padding:22px 0;border-bottom:1px solid var(--line);
+    font-size:clamp(1.2rem,2vw,1.75rem);letter-spacing:-.025em
+  }
+  .q span:last-child{color:var(--accent-2)}
+  .vision{
+    display:grid;grid-template-columns:1fr 1fr;gap:20px
+  }
+  .kpi{
+    font-size:clamp(5rem,12vw,10rem);line-height:.8;letter-spacing:-.08em;
+    font-weight:800;color:var(--text)
+  }
+  .kpi small{font-size:1rem;letter-spacing:0;color:var(--muted);font-weight:500}
+  .pricing{
+    padding:46px;border-radius:28px;border:1px solid var(--line);
+    background:rgba(255,255,255,.022);
+    display:grid;grid-template-columns:.9fr 1.1fr;gap:48px
+  }
+  .price-wrap{
+    margin:28px 0 8px;
+    padding:18px 20px;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:18px;
+    background:rgba(255,255,255,.018);
+    display:inline-flex;
+    align-items:baseline;
+    gap:10px;
+  }
+  .price{
+    font-size:clamp(2rem,4vw,3.25rem);
+    font-weight:720;
+    letter-spacing:-.045em;
+    line-height:1;
+    margin:0;
+    color:#e7e8ec;
+  }
+  .price-sub{
+    color:#858a95;
+    font-size:.92rem;
+  }
+  .checklist{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;margin-top:10px}
+  .check{
+    padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);color:#d9dae0
+  }
+  .check::before{content:"✓";color:var(--accent-2);margin-right:11px}
+  .steps-next{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:38px
+  }
+  .next{
+    border-top:1px solid var(--line);padding-top:18px;color:var(--muted)
+  }
+  .next strong{display:block;color:var(--text);font-size:1.05rem;margin-bottom:6px}
+  .next .n{color:var(--accent-2);font-size:.8rem;letter-spacing:.12em}
+  .closing{text-align:center;padding-top:150px;padding-bottom:150px}
+  .closing h2{max-width:970px;margin:0 auto 30px}
+  .closing .three{
+    max-width:760px;margin:38px auto;color:#c8cad1;font-size:1.12rem;
+    display:flex;justify-content:center;gap:14px;flex-wrap:wrap
+  }
+  .closing .three span{padding:10px 14px;border:1px solid var(--line);border-radius:999px}
+  .footer{
+    border-top:1px solid var(--line);padding:28px 0 40px;color:#777c88;font-size:.84rem
+  }
+  .reveal{opacity:0;transform:translateY(18px);transition:.75s ease}
+  .reveal.on{opacity:1;transform:none}
+  @media(max-width:900px){
+    .split,.recording,.vision,.pricing{grid-template-columns:1fr}
+    .cards-4{grid-template-columns:1fr 1fr}
+    .cards-3{grid-template-columns:1fr}
+    .process{grid-template-columns:1fr 1fr}
+    .step:nth-child(2){border-right:0}
+    .step{border-bottom:1px solid var(--line)}
+    .step:nth-last-child(-n+2){border-bottom:0}
+    .service-grid{grid-template-columns:1fr}
+    .steps-next{grid-template-columns:1fr 1fr}
+    .hero::after{right:-350px}
+  }
+  @media(max-width:640px){
+    .wrap{width:min(calc(100% - 28px),var(--max))}
+    .nav-meta{display:none}
+    section{padding:90px 0}
+    .hero{min-height:92vh;padding-top:130px}
+    h1{font-size:3.6rem}
+    .hero-bottom{align-items:flex-start}
+    .cards-4,.process,.steps-next,.checklist{grid-template-columns:1fr}
+    .step{border-right:0;border-bottom:1px solid var(--line)!important}
+    .step:last-child{border-bottom:0!important}
+    .transition{grid-template-columns:1fr}
+    .big-arrow{transform:rotate(90deg);text-align:center}
+    .panel{padding:28px}
+    .pricing{padding:30px}
+    .orbit{height:310px}
+    .r1{width:100px;height:100px}.r2{width:190px;height:190px}.r3{width:280px;height:280px}
+  }
+
+  .portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:40px;
+  }
+  .portfolio-card{
+    border:1px solid var(--line);
+    border-radius:26px;
+    overflow:hidden;
+    background:rgba(255,255,255,.02);
+  }
+  .portfolio-card img{
+    display:block;
+    width:100%;
+    aspect-ratio:16/10;
+    object-fit:cover;
+    object-position:top center;
+    background:#0b0d10;
+  }
+  .portfolio-caption{
+    padding:16px 18px 18px;
+    font-size:.95rem;
+    color:#cfd1d8;
+  }
+  @media(max-width:700px){
+    .portfolio-grid{grid-template-columns:1fr}
+  }
+
+
+  a.portfolio-card{
+    display:block;
+    color:inherit;
+    text-decoration:none;
+    transition:border-color .2s ease, transform .2s ease, background .2s ease;
+    cursor:pointer;
+  }
+  .portfolio-caption{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .portfolio-link{
+    color:var(--accent-2);
+    font-size:1.05rem;
+  }
+  @media (hover:hover) and (pointer:fine){
+    a.portfolio-card:hover{
+      border-color:rgba(101,116,255,.5);
+      background:rgba(255,255,255,.035);
+      transform:translateY(-2px);
+    }
+  }
+  a.portfolio-card:focus-visible{
+    outline:2px solid var(--accent-2);
+    outline-offset:3px;
+  }
+
+
+
+.warning{border-left:3px solid var(--accent);padding:18px 22px;background:rgba(101,116,255,.07);border-radius:0 16px 16px 0;color:#cdd0dc}
+.tag{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:#8a96ff;font-weight:700}
+.table{width:100%;border-collapse:collapse;margin-top:28px}
+.table th,.table td{padding:18px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.table th{color:#9fa4b2;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+.table td{color:#e2e4ed}
+.table td:last-child{color:#adb2bf}
+.btn{display:inline-block;background:var(--accent);color:white;padding:15px 24px;border-radius:999px;font-weight:700;margin-top:24px}
+.note{font-size:.85rem;color:#a4a7b0}
+@media(max-width:640px){.table{font-size:.85rem}.table th,.table td{padding:12px 6px}}
+</style><style>
+.deadline-inline{display:inline-flex;gap:10px;align-items:center;margin-top:22px;border:1px solid rgba(101,116,255,.45);background:rgba(101,116,255,.09);border-radius:999px;padding:12px 18px;color:#e8e9ff;font-weight:650}
+
+.deadline-overlay{position:fixed;top:92px;right:18px;z-index:300;display:block;max-width:calc(100vw - 24px);touch-action:none}
+.deadline-modal{width:282px;max-width:calc(100vw - 24px);background:rgba(17,19,28,.96);border:1px solid rgba(138,150,255,.58);border-radius:18px;padding:14px 14px 12px;box-shadow:0 14px 42px rgba(0,0,0,.5);backdrop-filter:blur(16px);user-select:none}
+.deadline-handle{display:flex;align-items:center;justify-content:space-between;gap:8px;cursor:grab;touch-action:none;padding-bottom:9px;border-bottom:1px solid rgba(255,255,255,.1)}
+.deadline-handle:active{cursor:grabbing}
+.deadline-handle:focus-visible{outline:2px solid #8a96ff;outline-offset:3px}
+.deadline-label{font-size:.72rem;font-weight:800;color:#b9c0ff;letter-spacing:.05em;text-transform:uppercase}
+.deadline-grip{font-size:1.15rem;color:#a5a9bf;letter-spacing:1px}
+.deadline-modal .deadline-price{font-size:1.08rem;font-weight:800;margin:10px 0 2px;color:#fff}
+.deadline-modal .deadline-date{font-size:.74rem;color:#aeb2c3;margin:0;line-height:1.35}
+.deadline-modal .countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin:10px 0 0}
+.deadline-modal .count-unit{text-align:center;padding:7px 2px;background:rgba(101,116,255,.12);border:1px solid rgba(101,116,255,.24);border-radius:9px}
+.deadline-modal .count-unit strong{display:block;font-size:1.15rem;letter-spacing:-.04em;line-height:1.2;color:#f5f6ff}
+.deadline-modal .count-unit span{color:#aeb2c3;font-size:.62rem}
+.deadline-modal #deadline-state{margin:7px 0 0;font-size:.69rem;color:#aeb2c3}
+@media(max-width:640px){.deadline-overlay{top:auto;bottom:14px;right:12px}.deadline-modal{width:240px;padding:11px}.deadline-modal .count-unit strong{font-size:1rem}}
+@media(prefers-reduced-motion:reduce){.deadline-overlay{transition:none}}
+</style></head><body>
+<header class="nav"><div class="wrap nav-inner"><div class="brand"> <span class="accent">/</span> CAMILA</div><div class="nav-meta">Proposta estratégica · 2026</div><a class="pill" href="#investimento"><span class="dot"></span> Condições comerciais</a></div></header>
+<main>
+<section class="hero"><div class="wrap hero-copy reveal">
+<div class="eyebrow">Proposta comercial · Preparada para Camila</div>
+<h1>Conteúdo com<br/><span class="accent">direção de negócio.</span></h1>
+<p class="lead">Uma proposta de estruturação estratégica, criação de conteúdo e acompanhamento de performance para transformar presença digital em relacionamento e oportunidades comerciais.</p>
+<div class="hero-bottom"><p class="small">Uma proposta construída com prioridades a validar em conjunto, sem atribuir declarações à Camila que não tenham sido transcritas.</p><div class="arrow">↓</div></div>
+</div></section>
+<section><div class="wrap split">
+<div class="panel reveal"><div class="eyebrow">01 · Contexto</div><h2>Não basta manter um perfil ativo.</h2><p class="statement">A operação precisa conectar <span class="accent">mensagem, público e resultado.</span></p><p class="muted">A proposta é sair de uma lógica de publicações isoladas para um sistema que identifica prioridades, produz peças com função definida e aprende com a resposta do público.</p><div class="flow"><span>Diagnóstico</span><span>→</span><span>Estratégia</span><span>→</span><span>Execução</span><span>→</span><span>Aprendizado</span></div></div>
+<div class="panel glow reveal"><div class="eyebrow">Status da personalização</div><h3 style="font-size:1.8rem">Pontos em aberto</h3><p class="muted">Segmento prioritário, oferta atual, metas, canais, rotina de aprovação, capacidade de gravação, orçamento e critérios de sucesso.</p><div class="warning">Estes tópicos são campos de alinhamento — não afirmações sobre o que Camila disse.</div></div>
+</div></section>
+<section><div class="wrap reveal"><div class="eyebrow">02 · Hipótese de oportunidade</div><h2>De conteúdo disperso<br/>para um <span class="accent">sistema de crescimento.</span></h2>
+<div class="transition" style="margin-top:42px"><div class="state"><div class="eyebrow">Cenário a investigar</div><h3>Comunicação reativa</h3><ul><li>Pautas decididas em cima da hora</li><li>Conteúdo sem objetivo mensurável</li><li>Dependência de produção improvisada</li><li>Dificuldade para traduzir alcance em demanda</li></ul></div><div class="big-arrow">→</div><div class="state"><div class="eyebrow">Cenário proposto</div><h3>Operação estratégica</h3><ul><li>Posicionamento e mensagens claros</li><li>Rotina de produção previsível</li><li>Conteúdo distribuído por função</li><li>Revisão de indicadores e conversão</li></ul></div></div><p class="note" style="margin-top:18px">O cenário inicial acima é uma hipótese metodológica, não um diagnóstico confirmado da operação atual.</p>
+</div></section>
+<section><div class="wrap reveal"><div class="eyebrow">03 · Fundamentos</div><h2>Antes de produzir,<br/>definimos <span class="accent">para quem e por quê.</span></h2>
+<div class="cards-3">
+<div class="card"><div class="num">STP · 01</div><h3>Público e segmentação</h3><p>Identificar o perfil com maior potencial, necessidades e momento de compra.</p></div>
+<div class="card highlight"><div class="num">POSICIONAMENTO · 02</div><h3>Promessa e diferencial</h3><p>Traduzir a proposta de valor em mensagens reconhecíveis e específicas.</p></div>
+<div class="card"><div class="num">BENCHMARK · 03</div><h3>Referências e lacunas</h3><p>Observar três referências relevantes, seus formatos e os ângulos ainda pouco explorados.</p></div>
+</div>
+</div></section>
+<section><div class="wrap reveal"><div class="eyebrow">04 · Arquitetura editorial</div><h2>Cada conteúdo recebe<br/><span class="accent">uma missão.</span></h2>
+<div class="cards-3">
+<div class="card"><div class="num">HERO · DESCOBERTA</div><h3>Atrair novas pessoas.</h3><p>Temas de entrada, problemas reconhecíveis e abordagens com potencial de compartilhamento.</p></div>
+<div class="card highlight"><div class="num">HUB · RELAÇÃO / VENDA</div><h3>Construir demanda.</h3><p>Bastidores, opiniões, diferenciais, objeções, provas reais e chamadas alinhadas à oferta.</p></div>
+<div class="card"><div class="num">HELP · EDUCAÇÃO</div><h3>Gerar utilidade.</h3><p>Tutoriais, respostas frequentes e conteúdos que aumentam confiança.</p></div>
+</div><div class="flow"><span>AD</span><span>AD + PROF</span><span>PROF</span><span>PI</span><span>PL</span><span>CTA</span></div>
+</div></section>
+<section><div class="wrap reveal"><div class="eyebrow">05 · O processo estratégico</div><h2>Planejar, criar, operar,<br/><span class="muted">revisar.</span></h2>
+<div class="process">
+<div class="step"><div class="n">01</div><h3>Diagnóstico e COBO</h3><p>Briefing, pilares, formatos repetíveis e alinhamento de canais.</p></div>
+<div class="step"><div class="n">02</div><h3>Criação</h3><p>Ganchos, roteiros, copy, edição e orientação visual.</p></div>
+<div class="step"><div class="n">03</div><h3>Operação</h3><p>Calendário, fluxo de aprovação e publicação conforme escopo.</p></div>
+<div class="step"><div class="n">04</div><h3>Performance</h3><p>Leitura crítica dos indicadores e decisões para o próximo ciclo.</p></div>
+</div>
+</div></section>
+<section><div class="wrap split">
+<div class="panel reveal"><div class="eyebrow">06 · Implantação sugerida</div><h2>Primeiros <span class="accent">30 dias.</span></h2><p class="muted">Uma implantação progressiva, para evitar começar pela execução antes de saber o que precisa ser comunicado.</p></div>
+<div class="panel reveal"><div class="questions">
+<div class="q"><span>S1 · STP e objetivos</span><span>01</span></div>
+<div class="q"><span>S2 · Briefing e COBO</span><span>02</span></div>
+<div class="q"><span>S3 · Grade e primeiras peças</span><span>03</span></div>
+<div class="q"><span>S4 · Primeiro Radar</span><span>04</span></div>
+</div></div>
+</div></section>
+<section><div class="wrap reveal"><div class="eyebrow">07 · Escopo base sugerido</div><h2>Uma operação conectada.<br/><span class="accent">Sem prometer volume no escuro.</span></h2>
+<div class="service-grid">
+<div class="service"><h3>Estratégia <span>01</span></h3><p>Diagnóstico de público, posicionamento, concorrentes e plano editorial mensal.</p></div>
+<div class="service"><h3>Conteúdo <span>02</span></h3><p>Ideação, roteiros, títulos, legendas e CTAs. Quantidade e formatos serão definidos no aceite.</p></div>
+<div class="service"><h3>Operação <span>03</span></h3><p>Agenda de produção, aprovações, organização e publicação nos canais contratados.</p></div>
+<div class="service"><h3>Performance <span>04</span></h3><p>Radar quinzenal para aprovação e relatório de performance com recomendações.</p></div>
+</div><p class="note" style="margin-top:25px">Captação presencial, tráfego pago, verba de mídia, atendimento de DMs, identidade visual integral, landing pages e quantidade de revisões não estão incluídos automaticamente nesta versão.</p>
+</div></section>
+<section id="escuta"><div class="wrap reveal"><div class="eyebrow">07A · Escuta e alinhamento</div>
+<h2>O que importa para você precisa aparecer <span class="accent">na operação.</span></h2>
+<p class="lead">Para que esta parceria reflita as conversas e não apenas um pacote de serviços, estes são os pontos que propomos registrar e validar antes do início. Não são citações nem conclusões atribuídas à reunião.</p>
+<div class="cards-3">
+<div class="card"><div class="num">01 · PRIORIDADES</div><h3>Resultado esperado</h3><p>Qual transformação a Camila considera mais importante nos próximos 90 dias: percepção de marca, pedidos de orçamento, agenda ou vendas?</p></div>
+<div class="card"><div class="num">02 · ROTINA</div><h3>Tempo e participação</h3><p>Quais etapas exigem aprovação pessoal, quem aparece nos conteúdos e qual cadência de produção é realmente sustentável?</p></div>
+<div class="card"><div class="num">03 · DIFERENCIAÇÃO</div><h3>O que não pode se perder</h3><p>Quais valores, experiências, serviços e características devem permanecer reconhecíveis na comunicação?</p></div>
+</div>
+<div class="panel" style="margin-top:24px"><div class="eyebrow">Compromisso de execução</div><p class="statement">O planejamento começa pela realidade do negócio, não por uma grade pronta.</p><p class="muted">Na reunião de kick-off, essas respostas se tornam critérios objetivos de pauta, aprovação, acompanhamento e revisão.</p></div></div></section><section><div class="wrap reveal"><div class="eyebrow">08 · Resultado e mensuração</div><h2>Indicadores que<br/><span class="accent">orientam decisões.</span></h2>
+<table class="table"><thead><tr><th>Etapa</th><th>Indicadores observados</th><th>Decisão</th></tr></thead><tbody>
+<tr><td>Atenção</td><td>Alcance, visualizações, retenção inicial</td><td>Ajustar gancho e formato</td></tr>
+<tr><td>Interesse</td><td>Salvamentos, compartilhamentos, respostas</td><td>Repetir ângulos úteis</td></tr>
+<tr><td>Demanda</td><td>Visitas, cliques, DMs qualificadas</td><td>Refinar ponte e CTA</td></tr>
+<tr><td>Conversão</td><td>Leads, agendamentos e vendas atribuíveis</td><td>Corrigir oferta e jornada</td></tr>
+</tbody></table>
+<p class="note" style="margin-top:15px">Metas quantitativas requerem acesso aos dados atuais e definição da oferta comercial.</p>
+</div></section>
+<section id="investimento"><div class="wrap reveal"><div class="eyebrow">09 · Investimento</div><h2>Parceria sob medida.</h2>
+<div class="pricing"><div><div class="tag">Investimento mensal</div><div class="price-wrap"><div class="price">R$ 2.850</div><span class="price-sub">/ mês</span></div><p class="muted">Investimento mensal proposto, sujeito à aprovação do escopo e das condições comerciais.</p><div class="warning">Prazo contratual, volume de entregas e condições de pagamento serão alinhados no fechamento.</div></div>
+<div><h3 style="font-size:1.5rem">Condições para fechamento</h3><div class="checklist">
+<div class="check">Escopo e canais aprovados</div><div class="check">Quantidade de peças/mês</div><div class="check">Responsáveis por gravação</div><div class="check">Prazo de aprovação</div><div class="check">Ciclo de revisões</div><div class="check">Pagamento e vencimento a combinar</div><div class="check">Duração e rescisão</div><div class="check">Metas e acessos</div>
+</div></div></div>
+</div><div class="deadline-inline">⏳ Válida até 15/10/2026 · 23h59 (Brasília)</div></section>
+<section><div class="wrap reveal"><div class="eyebrow">10 · Próximos passos</div><h2>Alinhamos o essencial.<br/><span class="accent">Depois aceleramos.</span></h2>
+<div class="steps-next">
+<div class="next"><span class="n">01</span><strong>Confirmar prioridades</strong>Oferta e objetivos.</div>
+<div class="next"><span class="n">02</span><strong>Fechar escopo</strong>Volume, canais e papéis.</div>
+<div class="next"><span class="n">03</span><strong>Aprovar investimento</strong>Mensalidade e condições.</div>
+<div class="next"><span class="n">04</span><strong>Diagnosticar</strong>STP e benchmarking.</div>
+<div class="next"><span class="n">05</span><strong>Iniciar ciclo</strong>Conteúdo e performance.</div>
+</div></div></section>
+<section class="closing"><div class="wrap reveal"><div class="eyebrow"> × CAMILA</div><h2>Uma presença que<br/><span class="accent">faz o negócio avançar.</span></h2><p class="lead" style="margin:0 auto">Menos conteúdo por obrigação. Mais mensagem, consistência e decisões baseadas em evidência.</p><div class="three"><span>Estratégia</span><span>Conteúdo</span><span>Performance</span></div></div></section>
+</main><footer class="footer"><div class="wrap"> · Proposta estratégica para Camila · Outubro de 2026 · Documento preliminar para alinhamento.</div></footer>
+<script>const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.08});document.querySelectorAll('.reveal').forEach(x=>o.observe(x));</script>
+<aside class="deadline-overlay" id="deadline-overlay" aria-label="Contagem regressiva da validade da proposta">
+  <div class="deadline-modal">
+    <div class="deadline-handle" id="deadline-handle" tabindex="0" role="group" aria-label="Arraste para mover o contador. Use as setas do teclado para reposicionar.">
+      <span class="deadline-label">⏳ Proposta válida até quinta</span><span class="deadline-grip" aria-hidden="true">⠿</span>
+    </div>
+    <p class="deadline-price">R$ 2.850/mês</p>
+    <p class="deadline-date">15 de outubro de 2026 · 23h59 (Brasília)</p>
+    <div class="countdown" id="countdown">
+      <div class="count-unit"><strong data-unit="days">--</strong><span>dias</span></div>
+      <div class="count-unit"><strong data-unit="hours">--</strong><span>horas</span></div>
+      <div class="count-unit"><strong data-unit="minutes">--</strong><span>min</span></div>
+      <div class="count-unit"><strong data-unit="seconds">--</strong><span>seg</span></div>
+    </div>
+    <p id="deadline-state">Arraste pelo topo para mover.</p>
+  </div>
+</aside>
+<script>
+(function(){
+  const deadline=Date.parse('2026-10-15T23:59:59-03:00');
+  const box=document.getElementById('deadline-overlay');
+  const handle=document.getElementById('deadline-handle');
+  const state=document.getElementById('deadline-state');
+  const key='camila-float-counter-position-v1';
+  function tick(){
+    const total=Math.max(0,Math.floor((deadline-Date.now())/1000));
+    const parts={days:Math.floor(total/86400),hours:Math.floor(total%86400/3600),minutes:Math.floor(total%3600/60),seconds:total%60};
+    Object.entries(parts).forEach(([name,num])=>{box.querySelector('[data-unit="'+name+'"]').textContent=String(num).padStart(2,'0')});
+    if(total===0)state.textContent='Prazo encerrado. Consulte novas condições.';
+  }
+  function place(x,y){
+    const w=box.offsetWidth,h=box.offsetHeight;
+    x=Math.max(8,Math.min(window.innerWidth-w-8,x));
+    y=Math.max(8,Math.min(window.innerHeight-h-8,y));
+    box.style.left=x+'px';box.style.top=y+'px';box.style.right='auto';box.style.bottom='auto';
+    return {x,y};
+  }
+  try{
+    const saved=JSON.parse(localStorage.getItem(key)||'null');
+    if(saved&&Number.isFinite(saved.x)&&Number.isFinite(saved.y))place(saved.x,saved.y);
+  }catch(e){}
+  let drag=null;
+  handle.addEventListener('pointerdown',e=>{
+    if(e.button!==0)return;
+    const r=box.getBoundingClientRect();
+    drag={id:e.pointerId,dx:e.clientX-r.left,dy:e.clientY-r.top};
+    handle.setPointerCapture(e.pointerId);
+  });
+  handle.addEventListener('pointermove',e=>{
+    if(!drag||drag.id!==e.pointerId)return;
+    place(e.clientX-drag.dx,e.clientY-drag.dy);
+  });
+  function stop(e){
+    if(!drag||drag.id!==e.pointerId)return;
+    const r=box.getBoundingClientRect();
+    try{localStorage.setItem(key,JSON.stringify({x:r.left,y:r.top}))}catch(err){}
+    drag=null;
+  }
+  handle.addEventListener('pointerup',stop);
+  handle.addEventListener('pointercancel',stop);
+  handle.addEventListener('keydown',e=>{
+    const move={ArrowLeft:[-20,0],ArrowRight:[20,0],ArrowUp:[0,-20],ArrowDown:[0,20]}[e.key];
+    if(!move)return;
+    e.preventDefault();
+    const r=box.getBoundingClientRect();
+    const pos=place(r.left+move[0],r.top+move[1]);
+    try{localStorage.setItem(key,JSON.stringify(pos))}catch(err){}
+  });
+  window.addEventListener('resize',()=>{
+    if(box.style.left){const r=box.getBoundingClientRect();place(r.left,r.top)}
+  });
+  tick();setInterval(tick,1000);
+})();
+</script></body></html>
